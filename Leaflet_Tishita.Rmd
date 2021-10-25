@@ -1,0 +1,28 @@
+---
+title: "Leaflet by Tishita"
+author: "Tishita Goel"
+date: "25/10/2021"
+output: html_document
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Creating a leaflet map object.
+```{r cars}
+library(leaflet)
+```
+
+
+Then we create the pop-up map of NCR, which would be interactive.
+```{r}
+NCR <- c("<a href= 'https://en.wikipedia.org/wiki/Safdarjung_(Delhi)' >Safdarjung in Delhi</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=28.5647, lng=77.1949, popup = NCR)
+```
